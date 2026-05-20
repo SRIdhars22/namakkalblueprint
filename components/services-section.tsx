@@ -138,9 +138,9 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="relative py-20 px-4 md:px-8 lg:px-12 bg-secondary overflow-hidden">
+    <section id="services" className="relative py-20 px-4 md:px-8 lg:px-12 bg-muted/20 overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute top-[-50%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(26,58,143,0.05)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute top-[-50%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(26,58,143,0.04)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
@@ -166,13 +166,13 @@ export function ServicesSection() {
                 key={service.title}
                 className={`relative bg-card rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 group ${
                   service.isMain
-                    ? 'bg-gradient-to-b from-blue-navy to-blue-deep border-2 border-amber shadow-[0_0_20px_rgba(255,184,0,0.15)]'
-                    : 'border border-border border-t-[3px] border-t-primary shadow-[0_2px_12px_rgba(10,22,40,0.06)] hover:shadow-[0_24px_60px_rgba(26,58,143,0.14)] hover:border-cyan/25'
+                    ? 'bg-gradient-to-b from-[#0c1830] to-[#060c1a] dark:from-blue-navy dark:to-blue-deep border-2 border-amber shadow-[0_0_20px_rgba(255,184,0,0.12)]'
+                    : 'border border-border/80 border-t-[3px] border-t-primary shadow-[0_2px_12px_rgba(10,22,40,0.03)] hover:shadow-[0_24px_60px_rgba(26,58,143,0.1)] hover:border-cyan/25'
                 }`}
               >
                 {/* Main Service Badge */}
                 {service.isMain && (
-                  <div className="absolute top-[-14px] left-1/2 -translate-x-1/2 bg-amber text-blue-deep text-[11px] font-extrabold tracking-[2px] uppercase px-4 py-1 rounded-full whitespace-nowrap shadow-[0_4px_16px_rgba(255,184,0,0.5)] z-10">
+                  <div className="absolute top-[-14px] left-1/2 -translate-x-1/2 bg-amber text-blue-deep text-[11px] font-extrabold tracking-[2px] uppercase px-4 py-1 rounded-full whitespace-nowrap shadow-[0_4px_16px_rgba(255,184,0,0.4)] z-10">
                     MAIN SERVICE
                   </div>
                 )}
@@ -188,8 +188,8 @@ export function ServicesSection() {
                   <div
                     className={`w-16 h-16 rounded-xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-105 group-hover:-rotate-2 ${
                       service.isMain
-                        ? 'bg-gradient-to-br from-amber to-amber/80 shadow-[0_6px_24px_rgba(255,184,0,0.4)]'
-                        : 'bg-gradient-to-br from-primary to-blue-brand shadow-[0_6px_24px_rgba(26,58,143,0.28)] group-hover:shadow-[0_10px_32px_rgba(26,58,143,0.4)]'
+                        ? 'bg-gradient-to-br from-amber to-amber/80 shadow-[0_6px_24px_rgba(255,184,0,0.3)]'
+                        : 'bg-gradient-to-br from-primary to-blue-brand shadow-[0_6px_24px_rgba(26,58,143,0.18)] group-hover:shadow-[0_10px_32px_rgba(26,58,143,0.25)]'
                     }`}
                   >
                     <Icon className="w-7 h-7 text-white" />
@@ -206,20 +206,20 @@ export function ServicesSection() {
 
                   {/* Description */}
                   <p
-                    className={`text-[15px] leading-relaxed mb-5 ${
-                      service.isMain ? 'text-muted-foreground' : 'text-muted-foreground'
+                    className={`text-[14px] leading-relaxed mb-5 ${
+                      service.isMain ? 'text-slate-300' : 'text-muted-foreground'
                     }`}
                   >
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <ul className="flex flex-col gap-2 mb-5">
+                  <ul className="flex flex-col gap-2.5 mb-5">
                     {service.features.map((feature) => (
                       <li
                         key={feature}
-                        className={`flex items-start gap-2 text-sm ${
-                          service.isMain ? 'text-muted-foreground' : 'text-muted-foreground'
+                        className={`flex items-start gap-2 text-[13px] ${
+                          service.isMain ? 'text-slate-200' : 'text-muted-foreground'
                         }`}
                       >
                         <span className={service.isMain ? 'text-amber' : 'text-cyan'}>
@@ -235,7 +235,7 @@ export function ServicesSection() {
                     className={`inline-block text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full border transition-all ${
                       service.isMain
                         ? 'bg-amber/15 text-amber border-amber/40'
-                        : 'bg-cyan/8 text-primary border-primary/20 group-hover:bg-cyan/15 group-hover:border-cyan/30'
+                        : 'bg-cyan/8 text-primary border-primary/25 group-hover:bg-cyan/15 group-hover:border-cyan/30'
                     }`}
                   >
                     {service.tag}

@@ -134,7 +134,7 @@ export function ChatbotModal() {
         
         {/* Notification Dot */}
         {hasNotification && (
-          <span className="absolute top-0 right-0 w-4 h-4 bg-amber rounded-full border-2 border-blue-deep animate-pulse" />
+          <span className="absolute top-0 right-0 w-4 h-4 bg-amber rounded-full border-2 border-background animate-pulse" />
         )}
       </button>
 

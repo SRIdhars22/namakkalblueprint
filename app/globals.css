@@ -152,10 +152,16 @@
 
 .blueprint-grid {
   background-image:
-    linear-gradient(rgba(0, 200, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 200, 255, 0.055) 1px, transparent 1px);
+    linear-gradient(rgba(0, 120, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 120, 255, 0.035) 1px, transparent 1px);
   background-size: 60px 60px;
   animation: gridShift 20s linear infinite;
+}
+
+.dark .blueprint-grid {
+  background-image:
+    linear-gradient(rgba(0, 200, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 255, 0.055) 1px, transparent 1px);
 }
 
 /* Pulse Animation */

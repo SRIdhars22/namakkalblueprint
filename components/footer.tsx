@@ -1,16 +1,18 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Truck, MessageCircle, MapPin, Instagram, Facebook } from 'lucide-react'
+import { Phone, Truck, MessageCircle, MapPin, Instagram, Facebook, Clock, Mail } from 'lucide-react'
 
 const serviceLinks = [
   'Laser Xerox (B&W & Colour)',
-  'Large-Format A0/A1/A2',
-  'A3 & A4 Printing',
-  '2D Building Plans',
-  'Architectural Layouts',
-  'E-Seva Gov Documents',
-  'Certificate Services',
-  'Bulk Printing',
+  'Large-Format A0/A1/A2 Prints',
+  'A3 & A4 High-Quality Printing',
+  '2D Building Plan Drafting',
+  'Architectural Layout Designs',
+  'E-Seva Online Gov Services',
+  'Certificate Applications',
+  'Bulk Printing & Xerox Discounts',
 ]
 
 const workingHours = [
@@ -51,20 +53,21 @@ const shopLocations = [
 
 export function Footer() {
   return (
-    <footer id="contact" className="relative bg-blue-deep border-t-2 border-cyan overflow-hidden">
+    <footer id="contact" className="relative bg-gradient-to-b from-[#0c1830] to-[#040812] dark:from-[#060d1b] dark:to-[#02050b] border-t border-border/80 overflow-hidden text-slate-300">
       {/* Blueprint Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,200,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(0,200,255,0.025)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,200,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,200,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none" />
 
       {/* Bottom Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(ellipse,rgba(0,200,255,0.05)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(ellipse,rgba(0,200,255,0.04)_0%,transparent_70%)] pointer-events-none" />
 
       {/* Main Footer Content */}
       <div className="relative z-10 py-16 px-4 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          
           {/* Brand Column */}
-          <div>
+          <div className="flex flex-col gap-5">
             {/* Logo */}
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3">
               <div className="w-[52px] h-[52px] bg-white rounded-lg flex items-center justify-center p-1 shadow-[0_0_14px_rgba(0,200,255,0.2)]">
                 <Image
                   src="/logo.jpeg"
@@ -75,22 +78,41 @@ export function Footer() {
                 />
               </div>
               <div>
-                <div className="text-[11px] font-bold text-cyan tracking-[2px] uppercase">
+                <div className="text-[11px] font-bold text-cyan tracking-[2px] uppercase leading-tight">
                   Namakkal
                 </div>
-                <div className="text-xl font-black text-white">BLUE PRINT</div>
+                <div className="text-xl font-black text-white leading-tight">BLUE PRINT</div>
               </div>
             </div>
 
-            <p className="text-sm text-muted-foreground leading-relaxed mb-5 max-w-[280px]">
-              Your trusted one-stop shop for all printing, 2D architectural plan services, and government E-Seva in Namakkal.
+            <p className="text-[13px] text-slate-350 leading-relaxed max-w-[280px]">
+              Namakkal's premium one-stop shop for building approvals, survey layout designs, all-size printing, and official E-Seva online services.
             </p>
 
+            {/* Google & Justdial ratings summary */}
+            <div className="flex flex-col gap-2 bg-white/5 border border-cyan/15 rounded-xl p-4 max-w-[280px]">
+              <div className="flex justify-between items-center pb-2 border-b border-white/10">
+                <span className="text-xs font-bold text-white">Google Rating</span>
+                <div className="flex items-center gap-1">
+                  <span className="text-sm font-black text-cyan">5.0 / 5</span>
+                  <span className="text-amber-400 text-xs">★★★★★</span>
+                </div>
+              </div>
+              <div className="flex justify-between items-center pt-1">
+                <span className="text-xs font-bold text-white">Justdial Rating</span>
+                <div className="flex items-center gap-1">
+                  <span className="text-sm font-black text-cyan">4.5 / 5</span>
+                  <span className="text-amber-400 text-xs">★★★★☆</span>
+                </div>
+              </div>
+            </div>
+
             {/* Social Links */}
-            <div className="flex gap-2.5 mb-4">
+            <div className="flex gap-2.5">
               <Link
                 href="#"
-                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-muted-foreground hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.35)] transition-all"
+                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-350 hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.3)] transition-all"
+                aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
               </Link>
@@ -98,7 +120,8 @@ export function Footer() {
                 href="https://www.instagram.com/namakkal__blueprint"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-muted-foreground hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.35)] transition-all"
+                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-350 hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.3)] transition-all"
+                aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </Link>
@@ -106,41 +129,28 @@ export function Footer() {
                 href="https://wa.me/919500698927"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-muted-foreground hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.35)] transition-all"
+                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-350 hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.3)] transition-all"
+                aria-label="WhatsApp"
               >
                 <MessageCircle className="w-4 h-4" />
               </Link>
             </div>
-
-            {/* Instagram Follow Button */}
-            <Link
-              href="https://www.instagram.com/namakkal__blueprint"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded-lg px-4 py-3 text-white hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-[0_6px_20px_rgba(253,29,29,0.35)]"
-            >
-              <Instagram className="w-5 h-5" />
-              <div>
-                <div className="text-sm font-bold">Follow us on Instagram</div>
-                <div className="text-xs opacity-85">@namakkal_blueprint</div>
-              </div>
-            </Link>
           </div>
 
           {/* Services Column */}
           <div>
-            <h4 className="text-base font-extrabold text-white tracking-wide uppercase mb-4 relative">
+            <h4 className="text-sm font-extrabold text-white tracking-[2.5px] uppercase mb-4 relative">
               Services
               <span className="absolute bottom-[-8px] left-0 w-7 h-0.5 bg-gradient-to-r from-cyan to-transparent" />
             </h4>
-            <ul className="flex flex-col gap-2.5 mt-6">
+            <ul className="flex flex-col gap-2.5 mt-7">
               {serviceLinks.map((link) => (
                 <li key={link}>
                   <Link
                     href="#services"
-                    className="text-sm text-muted-foreground hover:text-white transition-colors flex items-center gap-1.5"
+                    className="text-xs md:text-sm text-slate-350 hover:text-cyan transition-colors flex items-center gap-1.5"
                   >
-                    <span className="text-cyan">&#8250;</span>
+                    <span className="text-cyan text-sm">&rsaquo;</span>
                     {link}
                   </Link>
                 </li>
@@ -150,116 +160,91 @@ export function Footer() {
 
           {/* Working Hours Column */}
           <div>
-            <h4 className="text-base font-extrabold text-white tracking-wide uppercase mb-4 relative">
+            <h4 className="text-sm font-extrabold text-white tracking-[2.5px] uppercase mb-4 relative">
               Working Hours
               <span className="absolute bottom-[-8px] left-0 w-7 h-0.5 bg-gradient-to-r from-cyan to-transparent" />
             </h4>
-            <div className="flex flex-col gap-2 mt-6">
+            <div className="flex flex-col gap-2 mt-7">
               {workingHours.map((hour) => (
                 <div
                   key={hour.day}
-                  className="flex justify-between items-center text-sm py-1.5 border-b border-white/5"
+                  className="flex justify-between items-center text-xs md:text-sm py-2 border-b border-white/5"
                 >
-                  <span className="text-muted-foreground">{hour.day}</span>
-                  <span className="text-white font-semibold flex items-center gap-2">
+                  <span className="text-slate-350">{hour.day}</span>
+                  <span className="text-white font-bold flex items-center gap-2">
                     {hour.time}
                     {hour.isOpen && (
-                      <span className="text-[11px] font-bold text-green-400">OPEN</span>
+                      <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">
+                        OPEN
+                      </span>
                     )}
                   </span>
                 </div>
               ))}
             </div>
-          </div>
 
-          {/* Contact Column */}
-          <div>
-            <h4 className="text-base font-extrabold text-white tracking-wide uppercase mb-4 relative">
-              Contact Us
-              <span className="absolute bottom-[-8px] left-0 w-7 h-0.5 bg-gradient-to-r from-cyan to-transparent" />
-            </h4>
-            <div className="flex flex-col gap-3.5 mt-6">
-              {/* Phone */}
-              <div className="flex items-start gap-3 text-sm text-muted-foreground">
-                <div className="w-8 h-8 bg-cyan/8 border border-cyan/20 rounded-lg flex items-center justify-center shrink-0">
-                  <Phone className="w-3.5 h-3.5 text-cyan" />
-                </div>
+            <div className="mt-6 bg-white/5 border border-cyan/15 rounded-xl p-4">
+              <div className="flex items-center gap-3 text-xs md:text-sm">
+                <Truck className="w-5 h-5 text-amber-light shrink-0" />
                 <div>
-                  <strong className="text-white block text-xs mb-0.5">Phone / WhatsApp</strong>
-                  <Link href="tel:+919500698927" className="text-cyan hover:text-cyan-light transition-colors">
-                    +91 95006 98927
-                  </Link>
-                </div>
-              </div>
-
-              {/* Delivery */}
-              <div className="flex items-start gap-3 text-sm text-muted-foreground">
-                <div className="w-8 h-8 bg-cyan/8 border border-cyan/20 rounded-lg flex items-center justify-center shrink-0">
-                  <Truck className="w-3.5 h-3.5 text-cyan" />
-                </div>
-                <div>
-                  <strong className="text-white block text-xs mb-0.5">Delivery Zone</strong>
-                  Up to 8 KM from our stores
+                  <strong className="text-white block text-xs mb-0.5">8 KM Delivery Zone</strong>
+                  <span className="text-slate-350 text-xs">For quick Xerox & A0-A4 prints</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* WhatsApp Button */}
-            <Link
-              href="https://wa.me/919500698927"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#25D366] to-[#1ebe5e] hover:from-[#1ebe5e] hover:to-[#16a84e] text-white font-bold text-sm tracking-wide uppercase px-5 py-3 rounded-lg mt-4 shadow-[0_4px_16px_rgba(37,211,102,0.3)] hover:shadow-[0_6px_22px_rgba(37,211,102,0.45)] hover:-translate-y-0.5 transition-all"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Chat on WhatsApp
-            </Link>
-
-            {/* Shop Locations */}
-            <div className="flex flex-col gap-3 mt-5">
+          {/* Contact & Stores Column */}
+          <div>
+            <h4 className="text-sm font-extrabold text-white tracking-[2.5px] uppercase mb-4 relative">
+              Our Stores
+              <span className="absolute bottom-[-8px] left-0 w-7 h-0.5 bg-gradient-to-r from-cyan to-transparent" />
+            </h4>
+            
+            <div className="flex flex-col gap-3.5 mt-7">
               {shopLocations.map((shop) => (
                 <div
                   key={shop.name}
-                  className={`bg-white/4 border border-cyan/15 rounded-lg p-3 transition-all hover:bg-cyan/5 ${
-                    shop.color === 'cyan' ? 'border-l-[3px] border-l-cyan' :
-                    shop.color === 'amber' ? 'border-l-[3px] border-l-amber' :
-                    'border-l-[3px] border-l-green-400'
+                  className={`bg-white/4 border border-cyan/10 rounded-xl p-3.5 transition-all hover:bg-cyan/5 ${
+                    shop.color === 'cyan' ? 'border-l-[3.5px] border-l-cyan' :
+                    shop.color === 'amber' ? 'border-l-[3.5px] border-l-amber' :
+                    'border-l-[3.5px] border-l-emerald-400'
                   }`}
                 >
                   <div className={`text-xs font-bold tracking-[1.5px] uppercase mb-1 ${
                     shop.color === 'cyan' ? 'text-cyan' :
                     shop.color === 'amber' ? 'text-amber' :
-                    'text-green-400'
+                    'text-emerald-400'
                   }`}>
                     {shop.name}
                   </div>
-                  <div className="text-xs text-muted-foreground leading-relaxed mb-2">
+                  <div className="text-[11px] text-slate-350 leading-relaxed mb-2.5">
                     {shop.address}
                   </div>
-                  <div className="flex items-center gap-2.5 flex-wrap">
+                  <div className="flex items-center gap-3 flex-wrap">
                     <Link
                       href={`tel:${shop.phone}`}
-                      className="text-xs font-bold text-cyan flex items-center gap-1"
+                      className="text-xs font-bold text-white hover:text-cyan flex items-center gap-1 transition-colors"
                     >
-                      <Phone className="w-3 h-3" />
+                      <Phone className="w-3.5 h-3.5 text-cyan" />
                       {shop.phoneDisplay}
                     </Link>
                     <Link
                       href={`https://wa.me/${shop.whatsapp}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs font-semibold text-green-400 flex items-center gap-1"
+                      className="text-xs font-bold text-emerald-400 flex items-center gap-1 transition-colors"
                     >
-                      <MessageCircle className="w-3 h-3" />
+                      <MessageCircle className="w-3.5 h-3.5" />
                       WhatsApp
                     </Link>
                     <Link
                       href={shop.mapsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs font-semibold text-amber flex items-center gap-1"
+                      className="text-xs font-bold text-amber flex items-center gap-1 transition-colors"
                     >
-                      <MapPin className="w-3 h-3" />
+                      <MapPin className="w-3.5 h-3.5" />
                       Maps
                     </Link>
                   </div>
@@ -267,14 +252,15 @@ export function Footer() {
               ))}
             </div>
           </div>
+
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative z-10 border-t border-white/5 py-5 px-4 md:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-muted-foreground">
+      <div className="relative z-10 border-t border-white/5 py-6 px-4 md:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm text-slate-400">
           <p>
-            © {new Date().getFullYear()} <span className="text-cyan">Namakkal Blueprint</span>. All rights reserved.
+            © {new Date().getFullYear()} <span className="text-cyan font-bold">Namakkal Blueprint</span>. All rights reserved.
           </p>
           <p className="flex items-center gap-2">
             <Link
@@ -285,10 +271,10 @@ export function Footer() {
             >
               @namakkal_blueprint
             </Link>
-            <span>·</span>
-            Print • Plan • E-Seva
-            <span>·</span>
-            <span className="text-cyan">Namakkal, Tamil Nadu</span>
+            <span>&middot;</span>
+            <span>Print &bull; Plan &bull; E-Seva</span>
+            <span>&middot;</span>
+            <span className="text-cyan font-bold">Namakkal, Tamil Nadu</span>
           </p>
         </div>
       </div>
