@@ -32,17 +32,20 @@ export function HeroSection() {
             {/* Eyebrow Badge */}
             <div className="inline-flex items-center gap-2.5 bg-cyan/8 border border-cyan/30 rounded px-4 py-2 mb-6 animate-fade-up shadow-[0_0_20px_rgba(0,200,255,0.05)_inset]">
               <span className="w-1.5 h-1.5 bg-cyan rounded-full animate-pulse-glow shadow-[0_0_6px_var(--cyan)]" />
-              <span className="text-xs font-bold text-cyan tracking-[2.5px] uppercase">
+              <span className="text-sm font-bold text-cyan tracking-[2.5px] uppercase">
                 {"Namakkal's #1 Building Approval & Print Partner"}
               </span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-4xl lg:text-5xl font-black text-foreground leading-[1.08] mb-4 animate-fade-up [animation-delay:0.1s] text-balance">
-              Namakkal Blueprint - Your Ultimate{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber to-amber-light"> Building Approval, Survey, Layout, 2D Plan, Print</span>
-              <br />& E-Seva Partner
-            </h1>
+<h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-foreground leading-[1.15] tracking-wide mb-4 animate-fade-up [animation-delay:0.1s] text-balance">
+  Namakkal Blueprint - Your Ultimate{' '}
+  <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-amber to-amber-light">
+    Building Approval, Survey, Layout, 2D Plan, Print
+  </span>
+  <br />
+  & E-Seva Partner
+</h1>
 
             {/* Google & Justdial Badges */}
             <div className="flex flex-wrap items-center gap-4 mb-6 animate-fade-up [animation-delay:0.15s]">
@@ -116,7 +119,7 @@ export function HeroSection() {
                 size="lg"
                 className="bg-gradient-to-r from-amber to-amber/90 hover:from-amber-light hover:to-amber text-blue-deep font-extrabold text-base tracking-wide uppercase px-8 py-6 rounded shadow-[0_4px_20px_rgba(255,184,0,0.3)] hover:shadow-[0_8px_30px_rgba(255,184,0,0.45)] hover:-translate-y-0.5 transition-all relative overflow-hidden group cursor-pointer"
               >
-                <Link href="https://wa.me/919500698927" target="_blank" rel="noopener noreferrer">
+                <Link href="https://wa.me/919500898927" target="_blank" rel="noopener noreferrer">
                   <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-[100%] transition-[left] duration-400" />
                   Upload & Order Now
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -142,7 +145,7 @@ export function HeroSection() {
               {/* Logo Card */}
               <div className="col-span-2 bg-white dark:bg-card border border-border/60 rounded-xl p-4 flex items-center justify-center shadow-[0_8px_32px_rgba(10,22,40,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
                 <Image
-                  src="/logo.jpeg"
+                  src="/logo.jpg"
                   alt="Namakkal Blueprint Logo"
                   width={160}
                   height={80}
@@ -161,7 +164,7 @@ export function HeroSection() {
                   style={{ animationDelay: `${0.4 + index * 0.08}s` }}
                 >
                   <div
-                    className={`text-4.5xl font-black leading-none ${stat.accent ? 'text-amber' : 'text-cyan'
+                    className={`text-2xl font-bold leading-none ${stat.accent ? 'text-amber' : 'text-cyan'
                       }`}
                   >
                     {stat.value}

@@ -103,7 +103,7 @@ export function WhyChooseSection() {
               <div className="flex items-center gap-3.5 mb-8">
                 <div className="w-[72px] h-[72px] bg-white rounded-xl flex items-center justify-center p-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.15)]">
                   <Image
-                    src="/logo.jpeg"
+                    src="/logo.jpg"
                     alt="Namakkal Blueprint Logo"
                     width={60}
                     height={60}
@@ -140,7 +140,7 @@ export function WhyChooseSection() {
                 asChild
                 className="w-full bg-gradient-to-r from-amber to-amber/90 hover:from-amber-light hover:to-amber text-blue-deep font-extrabold text-base tracking-wide uppercase py-6 rounded-lg shadow-[0_4px_20px_rgba(255,184,0,0.3)] hover:shadow-[0_6px_28px_rgba(255,184,0,0.45)] transition-all relative overflow-hidden group cursor-pointer"
               >
-                <Link href="https://wa.me/919500698927" target="_blank" rel="noopener noreferrer">
+                <Link href="https://wa.me/919500898927" target="_blank" rel="noopener noreferrer">
                   <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-[100%] transition-[left] duration-400" />
                   Send Your File Now
                 </Link>

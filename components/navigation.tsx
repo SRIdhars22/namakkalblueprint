@@ -29,11 +29,10 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-background/90 shadow-[0_4px_30px_rgba(0,200,255,0.06)] border-b border-border/80'
-          : 'bg-background/70'
-      } backdrop-blur-xl border-b border-border/40`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-background/90 shadow-[0_4px_30px_rgba(0,200,255,0.06)] border-b border-border/80'
+        : 'bg-background/70'
+        } backdrop-blur-xl border-b border-border/40`}
     >
       {/* Gradient line at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan/30 to-transparent opacity-80" />
@@ -41,9 +40,9 @@ export function Navigation() {
       <div className="flex items-center justify-between px-4 md:px-8 lg:px-12 h-[70px]">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-11 h-11 flex items-center justify-center scale-1.5">
+          <div className="relative w-11 h-11 flex items-center justify-center">
             <Image
-              src="/logo.jpeg"
+              src="/logo.jpg"
               alt="Namakkal Blueprint Logo"
               width={40}
               height={40}
@@ -78,12 +77,12 @@ export function Navigation() {
         {/* CTA Button & Toggle */}
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          
+
           <Button
             asChild
             className="hidden sm:inline-flex bg-gradient-to-r from-amber to-amber-light hover:from-amber-light hover:to-amber text-blue-deep font-bold text-sm tracking-wide uppercase px-5 py-2.5 rounded shadow-[0_4px_14px_rgba(255,184,0,0.25)] hover:shadow-[0_6px_20px_rgba(255,184,0,0.4)] hover:-translate-y-0.5 transition-all cursor-pointer"
           >
-            <Link href="https://wa.me/919500698927" target="_blank" rel="noopener noreferrer">
+            <Link href="https://wa.me/919500898927" target="_blank" rel="noopener noreferrer">
               WhatsApp Us
             </Link>
           </Button>
@@ -119,7 +118,7 @@ export function Navigation() {
                 asChild
                 className="w-full bg-gradient-to-r from-amber to-amber-light text-blue-deep font-bold text-sm tracking-wide uppercase"
               >
-                <Link href="https://wa.me/919500698927" target="_blank" rel="noopener noreferrer">
+                <Link href="https://wa.me/919500898927" target="_blank" rel="noopener noreferrer">
                   WhatsApp Us
                 </Link>
               </Button>

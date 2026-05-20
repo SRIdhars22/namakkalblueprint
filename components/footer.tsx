@@ -63,14 +63,14 @@ export function Footer() {
       {/* Main Footer Content */}
       <div className="relative z-10 py-16 px-4 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          
+
           {/* Brand Column */}
           <div className="flex flex-col gap-5">
             {/* Logo */}
             <div className="flex items-center gap-3">
               <div className="w-[52px] h-[52px] bg-white rounded-lg flex items-center justify-center p-1 shadow-[0_0_14px_rgba(0,200,255,0.2)]">
                 <Image
-                  src="/logo.jpeg"
+                  src="/logo.jpg"
                   alt="Namakkal Blueprint Logo"
                   width={44}
                   height={44}
@@ -126,7 +126,7 @@ export function Footer() {
                 <Instagram className="w-4 h-4" />
               </Link>
               <Link
-                href="https://wa.me/919500698927"
+                href="https://wa.me/919500898927"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-350 hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.3)] transition-all"
@@ -200,22 +200,20 @@ export function Footer() {
               Our Stores
               <span className="absolute bottom-[-8px] left-0 w-7 h-0.5 bg-gradient-to-r from-cyan to-transparent" />
             </h4>
-            
+
             <div className="flex flex-col gap-3.5 mt-7">
               {shopLocations.map((shop) => (
                 <div
                   key={shop.name}
-                  className={`bg-white/4 border border-cyan/10 rounded-xl p-3.5 transition-all hover:bg-cyan/5 ${
-                    shop.color === 'cyan' ? 'border-l-[3.5px] border-l-cyan' :
+                  className={`bg-white/4 border border-cyan/10 rounded-xl p-3.5 transition-all hover:bg-cyan/5 ${shop.color === 'cyan' ? 'border-l-[3.5px] border-l-cyan' :
                     shop.color === 'amber' ? 'border-l-[3.5px] border-l-amber' :
-                    'border-l-[3.5px] border-l-emerald-400'
-                  }`}
+                      'border-l-[3.5px] border-l-emerald-400'
+                    }`}
                 >
-                  <div className={`text-xs font-bold tracking-[1.5px] uppercase mb-1 ${
-                    shop.color === 'cyan' ? 'text-cyan' :
+                  <div className={`text-xs font-bold tracking-[1.5px] uppercase mb-1 ${shop.color === 'cyan' ? 'text-cyan' :
                     shop.color === 'amber' ? 'text-amber' :
-                    'text-emerald-400'
-                  }`}>
+                      'text-emerald-400'
+                    }`}>
                     {shop.name}
                   </div>
                   <div className="text-[11px] text-slate-350 leading-relaxed mb-2.5">

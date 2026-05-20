@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
-const poppins = Poppins({ 
+const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-poppins',
@@ -122,7 +122,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'Namakkal Blueprint',
-              image: 'https://namakkalblueprint.com/logo.jpeg',
+              image: 'https://namakkalblueprint.com/logo.jpg',
               '@id': 'https://namakkalblueprint.com',
               url: 'https://namakkalblueprint.com',
               telephone: '+919500698927',
@@ -161,7 +161,7 @@ export default function RootLayout({
               ],
               sameAs: [
                 'https://www.instagram.com/namakkal__blueprint',
-                'https://wa.me/919500698927',
+                'https://wa.me/919500898927',
               ],
               priceRange: '$$',
               servesCuisine: 'Document Services',
