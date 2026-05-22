@@ -4,7 +4,7 @@ import { ArrowRight, Truck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const stats = [
-  { value: 'A0-A4', label: 'All Paper Sizes', accent: false },
+  { value: 'A0-A6', label: 'All Paper Sizes', accent: false },
   { value: '8KM', label: 'Delivery Radius', accent: true },
   { value: '2D', label: 'Building Plans', accent: false },
   { value: 'E-Gov', label: 'Online Services', accent: true },
@@ -38,14 +38,14 @@ export function HeroSection() {
             </div>
 
             {/* Main Heading */}
-<h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-foreground leading-[1.15] tracking-wide mb-4 animate-fade-up [animation-delay:0.1s] text-balance">
-  Namakkal Blueprint - Your Ultimate{' '}
-  <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-amber to-amber-light">
-    Building Approval, Survey, Layout, 2D Plan, Print
-  </span>
-  <br />
-  & E-Seva Partner
-</h1>
+            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-foreground leading-[1.15] tracking-wide mb-4 animate-fade-up [animation-delay:0.1s] text-balance">
+              Namakkal Blueprint - Your Ultimate{' '}
+              <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-amber to-amber-light">
+                Building Approval, Survey, Layout, 2D Plan, Print
+              </span>
+              <br />
+              & E-Seva Partner
+            </h1>
 
             {/* Google & Justdial Badges */}
             <div className="flex flex-wrap items-center gap-4 mb-6 animate-fade-up [animation-delay:0.15s]">
@@ -142,15 +142,21 @@ export function HeroSection() {
           {/* Hero Visual - Stats Cards */}
           <div className="hidden lg:block">
             <div className="grid grid-cols-2 gap-4 max-w-md ml-auto animate-fade-up [animation-delay:0.4s]">
-              {/* Logo Card */}
-              <div className="col-span-2 bg-white dark:bg-card border border-border/60 rounded-xl p-4 flex items-center justify-center shadow-[0_8px_32px_rgba(10,22,40,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
-                <Image
-                  src="/logo.jpg"
-                  alt="Namakkal Blueprint Logo"
-                  width={160}
-                  height={80}
-                  className="object-contain"
-                />
+
+              {/* Logo Video Card */}
+              <div className="col-span-2 bg-white dark:bg-card border border-border/60 rounded-xl overflow-hidden shadow-[0_8px_32px_rgba(10,22,40,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source
+                    src="https://res.cloudinary.com/drpx7xk1y/video/upload/v1779468506/Merge_videos_project_-_22_May_2026_at_21.53.41_w9gr0s.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
 
               {/* Stat Cards */}
@@ -158,8 +164,8 @@ export function HeroSection() {
                 <div
                   key={stat.label}
                   className={`bg-card border border-border/80 rounded-xl p-5 text-center backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md ${stat.accent
-                    ? 'hover:bg-amber/5 hover:border-amber/30'
-                    : 'hover:bg-cyan/5 hover:border-cyan/30'
+                      ? 'hover:bg-amber/5 hover:border-amber/30'
+                      : 'hover:bg-cyan/5 hover:border-cyan/30'
                     }`}
                   style={{ animationDelay: `${0.4 + index * 0.08}s` }}
                 >
@@ -169,6 +175,7 @@ export function HeroSection() {
                   >
                     {stat.value}
                   </div>
+
                   <div className="text-xs font-semibold text-muted-foreground tracking-wide uppercase mt-2">
                     {stat.label}
                   </div>
