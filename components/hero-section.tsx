@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Truck } from 'lucide-react'
+import { ArrowRight, Motorbike, Truck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const stats = [
   { value: 'A0-A6', label: 'All Paper Sizes', accent: false },
-  { value: '8KM', label: 'Delivery Radius', accent: true },
+  { value: '5KM', label: 'Delivery Radius', accent: true },
   { value: '2D', label: 'Building Plans', accent: false },
   { value: 'E-Gov', label: 'Online Services', accent: true },
 ]
@@ -106,9 +106,9 @@ export function HeroSection() {
 
             {/* Delivery Badge */}
             <div className="inline-flex items-center gap-2.5 bg-amber/8 dark:bg-amber/12 border border-amber/40 dark:border-amber/55 rounded-lg px-4 py-2.5 mb-8 animate-fade-up [animation-delay:0.25s] shadow-[0_4px_16px_rgba(255,184,0,0.06)]">
-              <Truck className="w-5 h-5 text-amber-light animate-float-bounce" />
+              <Motorbike className="w-6 h-6 text-amber-light" />
               <span className="text-sm md:text-base font-bold text-foreground">
-                Delivery available up to <strong className="text-amber">8 KM radius</strong> for Xerox & Prints!
+                Delivery available up to <strong className="text-amber">5 KM radius</strong> for Xerox & Prints!
               </span>
             </div>
 
@@ -164,8 +164,8 @@ export function HeroSection() {
                 <div
                   key={stat.label}
                   className={`bg-card border border-border/80 rounded-xl p-5 text-center backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md ${stat.accent
-                      ? 'hover:bg-amber/5 hover:border-amber/30'
-                      : 'hover:bg-cyan/5 hover:border-cyan/30'
+                    ? 'hover:bg-amber/5 hover:border-amber/30'
+                    : 'hover:bg-cyan/5 hover:border-cyan/30'
                     }`}
                   style={{ animationDelay: `${0.4 + index * 0.08}s` }}
                 >

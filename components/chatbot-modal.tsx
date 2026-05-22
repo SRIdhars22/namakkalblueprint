@@ -127,7 +127,7 @@ export function ChatbotModal() {
       {/* Chat Trigger Button */}
       <button
         onClick={handleOpen}
-        className="fixed bottom-7 left-7 z-50 w-16 h-16 bg-gradient-to-br from-blue-navy to-primary border-2 border-cyan/50 rounded-full flex items-center justify-center cursor-pointer shadow-[0_6px_28px_rgba(0,200,255,0.3)] hover:scale-110 hover:border-cyan transition-all animate-chat-pulse hover:animate-none"
+        className="fixed bottom-7 right-7 z-50 w-16 h-16 bg-gradient-to-br from-blue-navy to-primary border-2 border-cyan/50 rounded-full flex items-center justify-center cursor-pointer shadow-[0_6px_28px_rgba(0,200,255,0.3)] hover:scale-110 hover:border-cyan transition-all animate-chat-pulse hover:animate-none"
         aria-label="Open chat assistant"
       >
         <Bot className="w-7 h-7 text-white" />
@@ -140,7 +140,7 @@ export function ChatbotModal() {
 
       {/* Chat Modal */}
       {isOpen && (
-        <div className="fixed bottom-28 left-7 z-50 w-[360px] max-w-[calc(100vw-56px)] bg-card border border-cyan/20 rounded-2xl shadow-[0_16px_60px_rgba(0,200,255,0.2)] overflow-hidden animate-fade-up">
+        <div className="fixed bottom-28 right-7 z-50 w-[360px] max-w-[calc(100vw-56px)] bg-card border border-cyan/20 rounded-2xl shadow-[0_16px_60px_rgba(0,200,255,0.2)] overflow-hidden animate-fade-up">
           {/* Header */}
           <div className="relative bg-gradient-to-r from-blue-navy to-blue-deep px-4 py-3 border-b border-cyan/15">
             {/* Grid pattern */}
@@ -259,7 +259,7 @@ export function ChatbotModal() {
             <p className="text-[10px] text-muted-foreground text-center mt-2">
               Or call us at{' '}
               <a href="tel:+919500698927" className="text-cyan hover:underline">
-                +91 95006 98927
+                +91 95008 98927
               </a>
             </p>
           </form>

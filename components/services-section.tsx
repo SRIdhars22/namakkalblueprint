@@ -172,7 +172,7 @@ export function ServicesSection() {
               >
                 {/* Main Service Badge */}
                 {service.isMain && (
-                  <div className="absolute top-[-14px] left-1/2 -translate-x-1/2 bg-amber text-blue-deep text-[11px] font-extrabold tracking-[2px] uppercase px-4 py-1 rounded-full whitespace-nowrap shadow-[0_4px_16px_rgba(255,184,0,0.4)] z-10">
+                  <div className="absolute top-[3px] left-1/2 -translate-x-1/2 bg-amber text-blue-deep text-[11px] font-extrabold tracking-[2px] uppercase px-4 py-1 rounded-full whitespace-nowrap shadow-[0_4px_16px_rgba(255,184,0,0.4)] z-10">
                     MAIN SERVICE
                   </div>
                 )}
@@ -181,7 +181,11 @@ export function ServicesSection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/2 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
                 {/* Bottom Gradient Line */}
-                <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-cyan via-primary to-cyan scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                <div className={`absolute bottom-0 left-0 right-0 h-[3px] scale-x-0 group-hover:scale-x-100 transition-transform origin-left ${
+                  service.isMain
+                    ? 'bg-gradient-to-r from-amber via-amber-light to-amber'
+                    : 'bg-gradient-to-r from-cyan via-primary to-cyan'
+                }`} />
 
                 <div className="p-8 pt-10">
                   {/* Icon */}

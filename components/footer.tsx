@@ -2,12 +2,13 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Truck, MessageCircle, MapPin, Instagram, Facebook, Clock, Mail } from 'lucide-react'
+import { Phone, MapPin, Instagram, Motorbike } from 'lucide-react'
+import { Icon } from '@iconify/react'
 
 const serviceLinks = [
   'Laser Xerox (B&W & Colour)',
   'Large-Format A0/A1/A2 Prints',
-  'A3 & A4 High-Quality Printing',
+  'A3 to A6 High-Quality Printing',
   '2D Building Plan Drafting',
   'Architectural Layout Designs',
   'E-Seva Online Gov Services',
@@ -16,8 +17,8 @@ const serviceLinks = [
 ]
 
 const workingHours = [
-  { day: 'Mon - Fri', time: '9:00 AM - 8:00 PM', isOpen: true },
-  { day: 'Saturday', time: '9:00 AM - 7:00 PM', isOpen: true },
+  { day: 'Mon - Sat', time: '9:00 AM - 8:00 PM', isOpen: true },
+  // { day: 'Saturday', time: '9:00 AM - 7:00 PM', isOpen: true },
   { day: 'Sunday', time: '10:00 AM - 4:00 PM', isOpen: false },
 ]
 
@@ -89,6 +90,10 @@ export function Footer() {
               Namakkal's premium one-stop shop for building approvals, survey layout designs, all-size printing, and official E-Seva online services.
             </p>
 
+            <p className="text-[13px] text-slate-350 leading-relaxed max-w-[280px]">
+              Email: <a href="mailto:namakkalblueprint@gmail.com">namakkalblueprint@gmail.com</a>
+            </p>
+
             {/* Google & Justdial ratings summary */}
             <div className="flex flex-col gap-2 bg-white/5 border border-cyan/15 rounded-xl p-4 max-w-[280px]">
               <div className="flex justify-between items-center pb-2 border-b border-white/10">
@@ -109,18 +114,18 @@ export function Footer() {
 
             {/* Social Links */}
             <div className="flex gap-2.5">
-              <Link
+              {/* <Link
                 href="#"
                 className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-350 hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.3)] transition-all"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
-              </Link>
+              </Link> */}
               <Link
                 href="https://www.instagram.com/namakkal__blueprint"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-350 hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.3)] transition-all"
+                className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-350 hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.3)] transition-all"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -129,10 +134,10 @@ export function Footer() {
                 href="https://wa.me/919500898927"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-350 hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.3)] transition-all"
+                className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-350 hover:bg-cyan hover:border-cyan hover:text-blue-deep hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,200,255,0.3)] transition-all"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-4 h-4" />
+              <Icon icon="ic:baseline-whatsapp" className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -168,16 +173,16 @@ export function Footer() {
               {workingHours.map((hour) => (
                 <div
                   key={hour.day}
-                  className="flex justify-between items-center text-xs md:text-sm py-2 border-b border-white/5"
+                  className="flex justify-between items-center text-xs md:text-sm py-1 border-b border-white/5"
                 >
                   <span className="text-slate-350">{hour.day}</span>
                   <span className="text-white font-bold flex items-center gap-2">
                     {hour.time}
-                    {hour.isOpen && (
+                    {/* {hour.isOpen && (
                       <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">
                         OPEN
                       </span>
-                    )}
+                    )} */}
                   </span>
                 </div>
               ))}
@@ -185,10 +190,10 @@ export function Footer() {
 
             <div className="mt-6 bg-white/5 border border-cyan/15 rounded-xl p-4">
               <div className="flex items-center gap-3 text-xs md:text-sm">
-                <Truck className="w-5 h-5 text-amber-light shrink-0" />
+                <Motorbike className="w-5 h-5 text-amber-light shrink-0" />
                 <div>
-                  <strong className="text-white block text-xs mb-0.5">8 KM Delivery Zone</strong>
-                  <span className="text-slate-350 text-xs">For quick Xerox & A0-A4 prints</span>
+                  <strong className="text-white block text-xs mb-0.5">5 KM Delivery Zone</strong>
+                  <span className="text-slate-350 text-xs">For quick Xerox & A0-A6 prints</span>
                 </div>
               </div>
             </div>
@@ -233,7 +238,8 @@ export function Footer() {
                       rel="noopener noreferrer"
                       className="text-xs font-bold text-emerald-400 flex items-center gap-1 transition-colors"
                     >
-                      <MessageCircle className="w-3.5 h-3.5" />
+                                    <Icon icon="ic:baseline-whatsapp" className="w-4 h-4" />
+
                       WhatsApp
                     </Link>
                     <Link

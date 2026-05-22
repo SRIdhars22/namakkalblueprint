@@ -13,7 +13,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Namakkal Blueprint | Print, Building Approval, 2D Plans & E-Seva Services',
-  description: 'Namakkal Blueprint - Your trusted partner for building approval, land layout, survey work, 2D architectural plans, large-format printing, xerox services, money transfer, and E-Seva government document services in Namakkal, Tamil Nadu. Fast 8KM delivery available.',
+  description: 'Namakkal Blueprint - Your trusted partner for building approval, land layout, survey work, 2D architectural plans, large-format printing, xerox services, money transfer, and E-Seva government document services in Namakkal, Tamil Nadu. Fast 5KM delivery available.',
   keywords: [
     'Namakkal Blueprint',
     'building approval Namakkal',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     url: 'https://namakkalblueprint.com',
     siteName: 'Namakkal Blueprint',
     title: 'Namakkal Blueprint | Print, Building Approval, 2D Plans & E-Seva Services',
-    description: 'Your one-stop shop for building approvals, land layout, survey work, 2D plans, printing, and E-Seva services in Namakkal. 8KM delivery available.',
+    description: 'Your one-stop shop for building approvals, land layout, survey work, 2D plans, printing, and E-Seva services in Namakkal. 5KM delivery available.',
     images: [
       {
         url: '/og-image.jpg',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Namakkal Blueprint | Print, Building Approval & E-Seva Services',
-    description: 'Professional building approvals, 2D plans, printing, and E-Seva services in Namakkal. 8KM delivery available.',
+    description: 'Professional building approvals, 2D plans, printing, and E-Seva services in Namakkal. 5KM delivery available.',
     images: ['/og-image.jpg'],
   },
   robots: {

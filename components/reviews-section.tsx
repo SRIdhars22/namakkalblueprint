@@ -210,12 +210,12 @@ export function ReviewsSection() {
             Had a great experience with Namakkal Blueprint?
           </p>
           <a 
-            href="https://maps.google.com/?q=No+707+A+Murugan+Kovil+Bus+Stop+Namakkal+Tamil+Nadu+637001"
+            href="https://www.google.com/search?q=namakkalblueprint&oq=namakkalblueprint&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MggIAhBFGCcYOzIJCAMQABgNGIAEMgoIBBAAGAgYDRgeMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINDY5MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#sv=CAESzQEKuQEStgEKd0FNbjMteVNnckFNajM1ZDBZSWNlYVFpZGNKYlRKU01OaVoxOGZ3dlVRaXFaa2VSbE95eThmeXNwQU9RVWFZd0FrQTdHR3d2QTE0cklVbEk5QmlEZFBPN0hhREh6eTJpbDEtNzZCLXlmeXhKMHFxcm56cVBrZi1rEhdUcEFRYXRpeEZQeXp3Y3NQajVqVHlBSRoiQUpLTEZtSnF4dEpYdGdfXzBMNVFtUS1lS1RET0VzWUJkZxIEODA1MRoBMyoAMAA4AUAAGAAgnszxjARKAhAC"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-bold text-cyan hover:text-cyan-light underline decoration-cyan/30 hover:decoration-cyan-light transition-colors"
           >
-            Leave us a review on Google & Justdial
+            Leave us a review on Google
           </a>
         </div>
       </div>

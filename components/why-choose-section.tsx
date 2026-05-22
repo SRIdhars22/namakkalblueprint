@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Zap, Target, Shield, DollarSign, Landmark, Smartphone } from 'lucide-react'
+import { Zap, Target, Shield, Landmark, Smartphone, IndianRupee } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const features = [
@@ -20,7 +20,7 @@ const features = [
     description: 'Your documents handled with complete privacy and care.',
   },
   {
-    icon: DollarSign,
+    icon: IndianRupee,
     title: 'Affordable Pricing',
     description: 'Competitive rates for individuals, businesses, and bulk.',
   },
@@ -37,8 +37,8 @@ const features = [
 ]
 
 const panelStats = [
-  { value: 'A0-A4', label: 'All Paper Sizes' },
-  { value: '8 KM', label: 'Delivery Coverage' },
+  { value: 'A0-A6', label: 'All Paper Sizes' },
+  { value: '5 KM', label: 'Delivery Coverage' },
   { value: '3-in-1', label: 'Print+Plan+ESeva' },
   { value: 'Fast', label: 'WhatsApp Orders' },
 ]
@@ -123,12 +123,12 @@ export function WhyChooseSection() {
                 {panelStats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-white/5 border border-cyan/10 rounded-lg p-4 text-center transition-all duration-300 hover:bg-cyan/10 hover:border-cyan/25 hover:-translate-y-0.5"
+                    className="bg-white/5 border border-cyan/10 rounded-lg p-4 text-center shadow-[0_0_16px_rgba(.0,0,0,0)] transition-all duration-300 hover:bg-cyan/10 hover:border-cyan/25 hover:-translate-y-0.5"
                   >
-                    <div className="text-3xl font-black text-cyan shadow-[0_0_16px_rgba(0,200,255,0.3)]">
+                    <div className="text-3xl font-black text-cyan ">
                       {stat.value}
                     </div>
-                    <div className="text-xs text-slate-350/80 mt-1">
+                    <div className="text-xs text-white mt-1">
                       {stat.label}
                     </div>
                   </div>

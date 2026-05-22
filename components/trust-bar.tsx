@@ -7,7 +7,7 @@ const trustItems = [
   'Building Approval Specialist',
   'Justdial Rating: 4.5/5 ★★★★☆',
   'Land Layout Plans',
-  '8 KM Doorstep Delivery',
+  '5 KM Doorstep Delivery',
   'Survey Work & Demarcation',
   '2D Architectural Plans',
   'Large-Format A0-A4 Printing',
@@ -47,7 +47,7 @@ export function TrustBar() {
         {[...trustItems, ...trustItems].map((item, index) => {
           const isGoogle = item.includes('Google')
           const isJustdial = item.includes('Justdial')
-          
+
           return (
             <div
               key={`${item}-${index}`}

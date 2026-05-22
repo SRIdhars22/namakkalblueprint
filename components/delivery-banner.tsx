@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { MapPin, Zap, MessageCircle, Home } from 'lucide-react'
+import { MapPin, Zap, MessageCircle, Home, Motorbike } from 'lucide-react'
+import { Icon as IconifyIcon } from '@iconify/react'  // ✅ renamed to avoid conflict
 
 const deliveryPills = [
   { icon: MapPin, label: 'Namakkal Store' },
@@ -30,7 +31,7 @@ export function DeliveryBanner() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight mb-4 text-balance">
               Doorstep Delivery
               <br />
-              Within <span className="text-amber drop-shadow-[0_0_12px_rgba(255,184,0,0.3)] animate-pulse-glow">8 KM Radius</span>
+              Within <span className="text-amber drop-shadow-[0_0_12px_rgba(255,184,0,0.3)]">5 KM Radius</span>
             </h2>
             <p className="text-sm md:text-base text-zinc-350 leading-relaxed max-w-md mb-6">
               {"Don't have time to visit our store? We've got you covered. Place your order on WhatsApp and we'll deliver your prints, xerox copies, and documents straight to your doorstep — fast and reliably within Namakkal city."}
@@ -39,13 +40,16 @@ export function DeliveryBanner() {
             {/* Pills */}
             <div className="flex flex-wrap gap-3">
               {deliveryPills.map((pill) => {
-                const Icon = pill.icon
+                const LucideIcon = pill.icon  // ✅ renamed to avoid shadowing IconifyIcon
                 return (
                   <div
                     key={pill.label}
                     className="inline-flex items-center gap-2 bg-white/5 border border-cyan/20 rounded-full px-4 py-2 text-xs md:text-sm font-semibold text-cyan-light backdrop-blur-sm transition-all hover:bg-cyan/10 hover:border-cyan/40 hover:-translate-y-0.5"
                   >
-                    <Icon className="w-4 h-4" />
+                    {pill.label === 'WhatsApp Order'
+                      ? <IconifyIcon icon="ic:baseline-whatsapp" className="w-4.5 h-4.5" />  // ✅ uses Iconify
+                      : <LucideIcon className="w-4 h-4" />                               // ✅ renders Lucide directly
+                    }
                     {pill.label}
                   </div>
                 )
@@ -55,27 +59,16 @@ export function DeliveryBanner() {
 
           {/* Visual Element */}
           <div className="flex flex-col items-center gap-3">
-            {/* Spinning Ring */}
-            <div className="relative w-[150px] h-[150px] rounded-full border border-cyan/30 flex items-center justify-center shadow-[0_0_40px_rgba(0,200,255,0.06)] animate-spin-ring">
-              {/* Inner dashed circle */}
+            <div className="relative w-[150px] h-[150px] rounded-full border border-cyan/30 flex items-center justify-center shadow-[0_0_40px_rgba(0,200,255,0.06)]">
               <div className="absolute inset-[10px] rounded-full border border-dashed border-cyan/10" />
-              
-              {/* Center Icon */}
-              <div className="w-[108px] h-[108px] bg-gradient-to-br from-primary to-cyan rounded-full flex items-center justify-center text-4xl shadow-[0_0_30px_rgba(0,200,255,0.2)] animate-spin-ring [animation-direction:reverse]">
-                <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11" />
-                  <path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2" />
-                  <circle cx="7" cy="18" r="2" />
-                  <path d="M15 18H9" />
-                  <circle cx="17" cy="18" r="2" />
-                </svg>
+              <div className="w-[108px] h-[108px] bg-gradient-to-br from-primary to-cyan rounded-full flex items-center justify-center text-4xl shadow-[0_0_30px_rgba(0,200,255,0.2)]">
+                <Motorbike className="w-16 h-16 text-white" />  {/* ✅ fixed typo */}
               </div>
             </div>
 
-            {/* Radius Text */}
             <div className="text-center">
               <div className="text-3xl font-black text-amber drop-shadow-[0_0_12px_rgba(255,184,0,0.3)]">
-                8 KM
+                5 KM
               </div>
               <div className="text-xs font-semibold text-slate-350 tracking-wide uppercase">
                 Delivery Zone

@@ -5,7 +5,7 @@ const SYSTEM_PROMPT = `You are the AI assistant for Namakkal Blueprint, a profes
 ## About Namakkal Blueprint
 - We are Namakkal's #1 Building Approval & Print Partner
 - We offer comprehensive services: Building Approval, Land Layout, Survey Work, 2D Plans, Printing, Money Transfer, E-Seva Government Services, Photoshop Design, and Bank Estimates
-- We provide delivery within 8 KM radius from our stores
+- We provide delivery within 5 KM radius from our stores
 
 ## Our Services:
 
@@ -80,8 +80,8 @@ const SYSTEM_PROMPT = `You are the AI assistant for Namakkal Blueprint, a profes
 - Accepted by All Major Banks
 
 ## Contact Information:
-- Phone/WhatsApp: +91 95006 98927
-- Shop 1: No 707 A, Murugan Kovil Bus Stop, Namakkal – Salem Road (Phone: 95006 98927)
+- Phone/WhatsApp: +91 95008 98927
+- Shop 1: No 707 A, Murugan Kovil Bus Stop, Namakkal – Salem Road (Phone: 95008 98927)
 - Shop 2: Canara Bank, No.8/13, opp. Paramathi Road, S P Pudur (Phone: 95009 28927)
 - Shop 3: 6597+G44, S P Pudur, Thillaipuram (Phone: 76398 98927)
 - Instagram: @namakkal_blueprint
@@ -94,9 +94,9 @@ const SYSTEM_PROMPT = `You are the AI assistant for Namakkal Blueprint, a profes
 ## Guidelines for Responses:
 1. Be helpful and professional
 2. Provide accurate information about our services
-3. For complex queries or pricing, recommend contacting via WhatsApp at +91 95006 98927
+3. For complex queries or pricing, recommend contacting via WhatsApp at +91 95008 98927
 4. If unsure about specific pricing, suggest visiting the store or calling
-5. Emphasize our 8 KM delivery service when relevant
+5. Emphasize our 5 KM delivery service when relevant
 6. Keep responses concise but informative
 7. Always be polite and welcoming`
 
@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
 • Revision & Re-submission Support
 • Status Tracking & Follow-up
 
-For building approval assistance, please WhatsApp us at +91 95006 98927 with your requirements. We'll guide you through the entire process!`
+For building approval assistance, please WhatsApp us at +91 95008 98927 with your requirements. We'll guide you through the entire process!`
     }
     // 2D Plans
     else if (lastMessage.includes('2d') || lastMessage.includes('plan') || lastMessage.includes('architectural') || lastMessage.includes('floor plan')) {
@@ -144,7 +144,7 @@ For building approval assistance, please WhatsApp us at +91 95006 98927 with you
 • Structural & Electrical Layouts
 • High-Precision Scaled Outputs
 
-Send your requirements or existing files via WhatsApp at +91 95006 98927 and we'll provide you with a quote!`
+Send your requirements or existing files via WhatsApp at +91 95008 98927 and we'll provide you with a quote!`
     }
     // Printing/Prices
     else if (lastMessage.includes('print') || lastMessage.includes('xerox') || lastMessage.includes('price') || lastMessage.includes('cost')) {
@@ -157,14 +157,14 @@ Send your requirements or existing files via WhatsApp at +91 95006 98927 and we'
 • Bulk Order Discounts Available
 • Same-Day Express Service
 
-For current pricing, please contact us at +91 95006 98927. Prices vary based on paper type, size, and quantity. We offer delivery within 8 KM!`
+For current pricing, please contact us at +91 95008 98927. Prices vary based on paper type, size, and quantity. We offer delivery within 5 KM!`
     }
     // Delivery
-    else if (lastMessage.includes('delivery') || lastMessage.includes('8km') || lastMessage.includes('8 km')) {
-      response = `Yes! We offer doorstep delivery within 8 KM radius of our stores in Namakkal.
+    else if (lastMessage.includes('delivery') || lastMessage.includes('5KM') || lastMessage.includes('5 KM')) {
+      response = `Yes! We offer doorstep delivery within 5 KM radius of our stores in Namakkal.
 
 Simply:
-1. Send your files via WhatsApp at +91 95006 98927
+1. Send your files via WhatsApp at +91 95008 98927
 2. Specify your requirements and location
 3. We'll prepare and deliver to your doorstep!
 
@@ -181,7 +181,7 @@ This service is available for xerox copies, prints, and documents. Quick turnaro
 • Revenue & Land Records
 • Online Application Filing & Tracking
 
-Visit any of our 3 shops or call +91 95006 98927 to schedule your service. We're experienced in handling all TN government online services!`
+Visit any of our 3 shops or call +91 95008 98927 to schedule your service. We're experienced in handling all TN government online services!`
     }
     // Survey
     else if (lastMessage.includes('survey') || lastMessage.includes('boundary') || lastMessage.includes('land')) {
@@ -194,7 +194,7 @@ Visit any of our 3 shops or call +91 95006 98927 to schedule your service. We're
 • GPS-Based Field Survey
 • Encroachment & Dispute Survey
 
-Contact us at +91 95006 98927 for survey requirements. Our team uses professional equipment for accurate measurements!`
+Contact us at +91 95008 98927 for survey requirements. Our team uses professional equipment for accurate measurements!`
     }
     // Contact/Location
     else if (lastMessage.includes('contact') || lastMessage.includes('location') || lastMessage.includes('address') || lastMessage.includes('where')) {
@@ -202,7 +202,7 @@ Contact us at +91 95006 98927 for survey requirements. Our team uses professiona
 
 📍 Shop 1 - Salem Road
 No 707 A, Murugan Kovil Bus Stop
-Phone: 95006 98927
+Phone: 95008 98927
 
 📍 Shop 2 - Paramathi Road  
 Canara Bank, No.8/13, opp. Paramathi Road
@@ -212,7 +212,7 @@ Phone: 95009 28927
 6597+G44, S P Pudur, Thillaipuram
 Phone: 76398 98927
 
-WhatsApp: +91 95006 98927
+WhatsApp: +91 95008 98927
 Instagram: @namakkal_blueprint`
     }
     // Working Hours
@@ -223,7 +223,7 @@ Instagram: @namakkal_blueprint`
 🕘 Saturday: 9:00 AM – 7:00 PM  
 🕙 Sunday: 10:00 AM – 4:00 PM
 
-Feel free to visit any of our 3 shops or contact us via WhatsApp at +91 95006 98927!`
+Feel free to visit any of our 3 shops or contact us via WhatsApp at +91 95008 98927!`
     }
     // Money Transfer
     else if (lastMessage.includes('money') || lastMessage.includes('transfer') || lastMessage.includes('neft') || lastMessage.includes('rtgs')) {
@@ -236,7 +236,7 @@ Feel free to visit any of our 3 shops or contact us via WhatsApp at +91 95006 98
 • All Major Banks Supported
 • Safe & Government Authorized
 
-Visit our shop with valid ID proof for money transfer services. Call +91 95006 98927 for any queries!`
+Visit our shop with valid ID proof for money transfer services. Call +91 95008 98927 for any queries!`
     }
     // Bank Estimate
     else if (lastMessage.includes('bank') || lastMessage.includes('estimate') || lastMessage.includes('loan')) {
@@ -249,7 +249,7 @@ Visit our shop with valid ID proof for money transfer services. Call +91 95006 9
 • Home Loan Estimate Preparation
 • Accepted by All Major Banks
 
-For bank estimate preparation, please visit our shop with your property details or call +91 95006 98927!`
+For bank estimate preparation, please visit our shop with your property details or call +91 95008 98927!`
     }
     // Hello/Greeting
     else if (lastMessage.includes('hello') || lastMessage.includes('hi') || lastMessage.includes('hey') || lastMessage.includes('good')) {
@@ -270,7 +270,7 @@ How can I help you today? Feel free to ask about any of our services!`
       response = `You're welcome! We're always happy to help.
 
 If you need anything else, feel free to ask or contact us directly:
-📞 Phone/WhatsApp: +91 95006 98927
+📞 Phone/WhatsApp: +91 95008 98927
 📸 Instagram: @namakkal_blueprint
 
 Thank you for choosing Namakkal Blueprint!`
@@ -289,8 +289,8 @@ We offer a wide range of services:
 • Photoshop Design Work
 
 For specific queries or to get started, please:
-📱 WhatsApp us at +91 95006 98927
-📞 Call: 95006 98927
+📱 WhatsApp us at +91 95008 98927
+📞 Call: 95008 98927
 
 How else can I assist you?`
     }
